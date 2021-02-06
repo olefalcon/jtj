@@ -123,11 +123,14 @@ kaydon_final_step = class({})
 function kaydon_final_step:OnSpellStart()
 	local caster = self:GetCaster()
 	local target = self:GetCursorPosition()
+	local dirVector = (target - caster:GetAbsOrigin())
+	local dir = dirVector/dirVector:Length()
+	local endLoc = caster:GetAbsOrigin() + dir * self:GetSpecialValueFor("dash_distance")
 	local width = self:GetSpecialValueFor("dash_width")
 	local enemies = FindUnitsInLine(
 		caster:GetTeam(),
 		caster:GetAbsOrigin(),
-		target,
+		endLoc,
 		nil,
 		width,
 		DOTA_UNIT_TARGET_TEAM_ENEMY,
@@ -136,8 +139,8 @@ function kaydon_final_step:OnSpellStart()
 	)
 	local iPtclID = ParticleManager:CreateParticle('particles/units/heroes/hero_void_spirit/astral_step/void_spirit_astral_step.vpcf', PATTACH_CUSTOMORIGIN, nil)
 	ParticleManager:SetParticleControl(iPtclID, 0, caster:GetAbsOrigin())
-	ParticleManager:SetParticleControl(iPtclID, 1, target)
-	FindClearSpaceForUnit(caster, target, true)
+	ParticleManager:SetParticleControl(iPtclID, 1, endLoc)
+	FindClearSpaceForUnit(caster, endLoc, true)
 	local goldStacks = 0
 	local damage = self:GetAbilityDamage()
 	local damageType = self:GetAbilityDamageType()
