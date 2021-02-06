@@ -66,9 +66,7 @@ function modifier_cj_ham_sandwich:GetModifierIncomingDamage_Percentage(params)
 end
 
 function modifier_cj_ham_sandwich:OnTakeDamage(params)
-	local target = self:GetCursorTarget()
 	if params.unit == caster then
-		print(dump(params))
 		cj_ham_sandwich.damageTaken = cj_ham_sandwich.damageTaken + params.original_damage;
 		cj_ham_sandwich.lastAttacker = params.attacker;
 	end
@@ -76,7 +74,7 @@ end
 
 function modifier_cj_ham_sandwich:OnDestroy()
 	local caster = self:GetAbility():GetCaster()
-	local target = self:GetAbility():GetCursorTarget()
+	local target = self:GetParent()
 
 	if caster:HasTalent("special_bonus_unique_cj_1") then
 		print("talent")
