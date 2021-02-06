@@ -290,10 +290,7 @@ function chase_oi:OnSpellStart()
 			FIND_ANY_ORDER,
 			false
 		)
-		print(table.getn(enemies))
 		local i = RandomInt(1, table.getn(enemies))
-		print(i)
-		print(dump(params))
 
 		if table.getn(enemies) > 0 then
 
@@ -340,10 +337,7 @@ function chase_oi:OnChannelThink( interval )
 			FIND_ANY_ORDER,
 			false
 		)
-		print(table.getn(enemies))
 		local i = RandomInt(1, table.getn(enemies))
-		print(i)
-		print(dump(interval))
 		if table.getn(enemies) > 0 then
 
 			local target = enemies[i]
