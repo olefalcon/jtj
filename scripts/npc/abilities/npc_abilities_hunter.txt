@@ -1,0 +1,189 @@
+//----------------
+//HUNTER
+//------------------
+"hunter_marine_punch"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_hunter"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"28.0 26.0 24.0 22.0"
+	"AbilityManaCost"				"100"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityDamage"					"80 150 250 380"
+	"AbilityTextureName"			"tusk_walrus_punch"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage"					"80 150 250 380"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stun_duration"				"1 1.2 1.4 1.8"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"cast_range"				"150"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"cooldown"					"28.0 25.0 21.0 16.0"
+		}
+	}
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts"
+	}
+}
+"hunter_payday"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_hunter"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"alchemist_goblins_greed"	// steal the icon from this ability
+	"AbilityCooldown"				"80.0"
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"gold_interest"				"5 8 11 14"
+		}
+	}
+}
+"hunter_retardation"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_hunter"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"ogre_magi_bloodlust"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"evasion"					"10 15 20 25"
+		}
+	}
+}
+"hunter_motocross"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_hunter"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityCastPoint"				"0.4"
+	"AbilityCooldown"				"160.0 135.0 110.0"
+	"AbilityManaCost"				"150"
+	"AbilityTextureName"			"elder_titan_natural_order"	// steal the icon from this ability
+	"MaxLevel"						"3"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"duration"						"8 10 12"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"movement_speed"				"600"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"cooldown_reduction"			"25 50 75"
+		}
+	}
+}
+"hunter_backflip"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_hunter"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"4.0"
+	"AbilityManaCost"				"45"
+	"AbilityTextureName"			"tusk_walrus_punch"	// steal the icon from this ability
+	"MaxLevel"						"1"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage"					"125"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"200"
+		}
+	}
+}
+"special_bonus_unique_hunter_1"			// start talent names with special_bonus_
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"3"
+		}
+	}
+}
+"special_bonus_unique_hunter_2"			// start talent names with special_bonus_
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"1"
+		}
+	}
+}
+"special_bonus_unique_hunter_3"			// start talent names with special_bonus_
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"4"
+		}
+	}
+}

@@ -1,0 +1,166 @@
+//-----------------
+//JALEN
+//-----------------
+"jalen_comment"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_jalen"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"30"
+	"AbilityManaCost"				"100"
+	"AbilityTextureName"			"axe_berserkers_call"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"evasion"					"40 50 60 70"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"500"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"1 2 3 4"
+		}
+	}
+}
+"jalen_mcdonalds"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_jalen"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"10"
+	"AbilityCastRange"				"600"
+	"AbilityManaCost"				"50"
+	"AbilityCastPoint"				"0.3"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityTextureName"			"venomancer_venomous_gale"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage"					"100 125 150 200"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"slow"						"70"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"debuff_duration"			"1 1.4 1.8 2.2"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"200"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"area_duration"				"2"
+		}
+	}
+	"precache"
+	{
+		"particle"  "particles/units/heroes/hero_viper/viper_nethertoxin.vpcf"
+	}
+}
+"jalen_broke"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_jalen"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"alchemist_goblins_greed"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"broke_factor"				"15 25 35 45"
+		}
+	}
+}
+"jalen_sweatshirt"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_jalen"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityCastPoint"				"0.4"
+	"AbilityCooldown"				"120.0 100.0 80.0"
+	"AbilityManaCost"				"150"
+	"AbilityTextureName"			"night_stalker_hunter_in_the_night"	// steal the icon from this ability
+	"MaxLevel"						"3"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"duration"						"20 25 30"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"movement_speed"				"200"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"attack_speed"					"100 150 200"
+		}
+	}
+}
+"special_bonus_unique_jalen_1"			// start talent names with special_bonus_
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"value"						"2"
+		}
+	}
+}
+"special_bonus_unique_jalen_2"			// start talent names with special_bonus_
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"100"
+		}
+	}
+}

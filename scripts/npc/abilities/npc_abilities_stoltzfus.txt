@@ -1,0 +1,101 @@
+//------------------
+//STOLTZFUS
+//------------------
+"stoltzfus_insults"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_stoltzfus"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCastRange"				"800"
+	"AbilityManaCost"				"50"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"AbilityDamage"					"1 2 3 4"
+	"AbilityTextureName"			"obsidian_destroyer_arcane_orb"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"projectile_speed"			"500"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"vision_radius"				"100"
+		}
+
+	}
+}
+"stoltzfus_rap"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_stoltzfus"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"24"
+	"AbilityCastRange"				"800"
+	"AbilityManaCost"				"150"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityDamage"					"100 150 200 250"
+	"AbilityTextureName"			"night_stalker_void"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stun_duration"				"0.5"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"200"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"area_duration"				"2"
+		}
+	}
+	"precache"
+	{
+		"particle"  "particles/units/heroes/hero_witchdoctor/witchdoctor_maledict_aoe.vpcf"
+	}
+}
+"stoltzfus_valedictorian"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_stoltzfus"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"silencer_glaives_of_wisdom"	// steal the icon from this ability
+	"MaxLevel"						"3"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_int"				"20 40 60"
+		}
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"600"
+		}
+	}
+}

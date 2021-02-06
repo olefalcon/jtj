@@ -1,0 +1,181 @@
+//--------------
+//JOHNNY
+//--------------
+"johnny_smoke"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_johnny"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"17 15 13 11"
+	"AbilityCastRange"				"600"
+	"AbilityManaCost"				"50"
+	"AbilityCastPoint"				"0.3"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityDamage"					"20 30 40 50"
+	"AbilityTextureName"			"riki_smoke_screen"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"tick"						"0.5"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"slow"						"70"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"debuff_duration"			"1"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"200"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"area_duration"				"5"
+		}
+	}
+	"precache"
+	{
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_riki.vsndevts"
+		"particle"  "particles/units/heroes/hero_riki/riki_smokebomb.vpcf"
+	}
+}
+"johnny_ar"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_johnny"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"				"0.8"
+	"AbilityCastRange"				"1000"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityTextureName"			"sniper_take_aim"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage_reduction"			"-25"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"bat"						"0.1"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"clip_ammo"					"15 20 25 30"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"max_ammo"					"30 60 90 120"
+		}
+	}
+}
+"johnny_buy_ammo"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_johnny"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityCastPoint"				"0.8"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityGoldCost"				"60"
+	"AbilityTextureName"			"sniper_headshot"	// steal the icon from this ability
+	"MaxLevel"						"1"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"ammo"						"30"
+		}
+	}
+}
+"johnny_reload"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_johnny"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityChannelTime"				"2.4"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityTextureName"			"sniper_headshot"	// steal the icon from this ability
+	"MaxLevel"						"1"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/ad
+	}
+}
+"johnny_snap_map"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_johnny"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"spectre_desolate"	// steal the icon from this ability
+	"AbilityCooldown"				"30 26 22 18"
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"duration"					"3 4 5 6"
+		}
+	}
+}
+"johnny_not_invited"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_johnny"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityCastPoint"				"0.6"
+	"AbilityCooldown"				"100.0 80.0 60.0"
+	"AbilityManaCost"				"200 220 240"
+	"AbilityTextureName"			"spectre_haunt"	// steal the icon from this ability
+	"MaxLevel"						"3"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"duration"					"10"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"bonus_gold"				"300 600 900"
+		}
+	}
+	"precache"
+	{
+		"particle"  "particles/units/heroes/hero_sven/sven_spell_gods_strength_ambient.vpcf"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
+	}
+}

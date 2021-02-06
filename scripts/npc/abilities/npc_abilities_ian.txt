@@ -1,0 +1,192 @@
+//-----------------
+//IAN
+//-----------------
+"ian_tennis"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_ian"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"14.0 12.0 11.0 10.0"
+	"AbilityCastRange"				"500"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityManaCost"				"140"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityTextureName"			"shadow_shaman_shackles"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage"					"50 100 150 200"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stun_duration"				"2.0 2.4 2.6 2.8"
+		}
+	}
+	"precache"
+	{
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts"
+	}
+}
+"ian_customer_service"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_ian"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"24.0 22.0 20.0 18.0"
+	"AbilityCastRange"				"1000"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityManaCost"				"140"
+	"AbilityTextureName"			"witch_doctor_voodoo_restoration"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"total_heal"				"200 250 300 400"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"heal_duration"				"8"
+		}
+	}
+}
+"ian_2skinny"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_ian"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"14.0 12.0 11.0 10.0"
+	"AbilityCastRange"				"500"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityManaCost"				"140"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityTextureName"			"invoker_deafening_blast"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage"					"80 160 240 340"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"500"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"speed"						"1200"
+		}
+	}
+	"precache"
+	{
+		"soundfile" "particles/units/heroes/hero_queenofpain/queen_scream_of_pain.vpcf"
+	}
+}
+"ian_wifi"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_ian"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastPoint"				"0.1"
+	"AbilityCooldown"				"140 120 100"
+	"AbilityCastRange"				"500"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityManaCost"				"140"
+	"AbilityTextureName"			"obsidian_destroyer_astral_imprisonment"	// steal the icon from this ability
+	"MaxLevel"						"3"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"banish_duration"			"7 8 9"
+		}
+	}
+	"precache"
+	{
+		"particle"	"particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_prison.vpcf"
+	}
+}
+"special_bonus_unique_ian_1"			// start talent names with special_bonus_
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"value"						"2"
+		}
+	}
+}
+"special_bonus_unique_ian_2"			// start talent names with special_bonus_
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+"special_bonus_unique_ian_3"			// start talent names with special_bonus_
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"value"						"10"
+		}
+	}
+}
+"special_bonus_unique_ian_4"			// start talent names with special_bonus_
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"value"						"120"
+		}
+	}
+}

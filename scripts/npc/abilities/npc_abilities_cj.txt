@@ -1,0 +1,199 @@
+//--------------
+//CJ
+//--------------
+"cj_eat_up"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/hero_cj"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"18.0"
+		"AbilityManaCost"				"100"
+		"AbilityTextureName"			"alchemist_unstable_concoction"	// steal the icon from this ability
+		"MaxLevel"						"4"							// Maximum skillable level
+		"AbilitySpecial"											
+		{
+			// filling in some values with some names
+			// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"strength_bonus"			"5 10 15 20"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hp_regen"					"10 12 16 20"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"8.0"
+			}
+		}
+	}
+	"cj_ham_sandwich"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/hero_cj"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"30.0 25.0 20.0 15.0"
+		"AbilityManaCost"				"150 160 170 180"
+		"AbilityTextureName"			"doom_bringer_devour"	// steal the icon from this ability
+		"MaxLevel"						"4"							// Maximum skillable level
+		"AbilitySpecial"											
+		{
+			// filling in some values with some names
+			// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage_delay"				"3.0 4.0 5.0 6.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"cast_range"				"800"
+			}
+		}
+	}
+	"cj_i_got_this"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/hero_cj"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tiny_grow"	// steal the icon from this ability
+		"MaxLevel"						"4"							// Maximum skillable level
+		"AbilitySpecial"											
+		{
+			// filling in some values with some names
+			// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"15 30 50 90"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"ally_search_radius"		"1000"
+			}
+		}
+	}
+	"cj_unstoppable_rage"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/hero_cj"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"OverrideAnimation"				"ACT_DOTA_ALCHEMIST_CHEMICAL_RAGE_START"
+		"AbilityCastPoint"				"0.6"
+		"AbilityCooldown"				"100.0 80.0 60.0"
+		"AbilityManaCost"				"200 220 240"
+		"AbilityTextureName"			"alchemist_chemical_rage"	// steal the icon from this ability
+		"MaxLevel"						"3"							// Maximum skillable level
+		"AbilitySpecial"											
+		{
+			// filling in some values with some names
+			// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"required_stacks"			"30 20 10"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"incoming_damage_reduction"	"-50"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"outgoing_damage_amplification"	"150"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"duration"	"8 10 12"
+			}
+		}
+		"precache"
+		{
+			"particle"  "particles/units/heroes/hero_sven/sven_spell_gods_strength_ambient.vpcf"
+			"soundfile" "soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
+		}
+	}
+	"special_bonus_unique_cj_1"			// start talent names with special_bonus_
+	{
+		"BaseClass"					"special_bonus_undefined"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"						"20"
+			}
+		}
+	}
+	"special_bonus_unique_cj_2"			// start talent names with special_bonus_
+	{
+		"BaseClass"					"special_bonus_undefined"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"60"
+			}
+		}
+	}
+	"special_bonus_unique_cj_3"			// start talent names with special_bonus_
+	{
+		"BaseClass"					"special_bonus_undefined"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"						"400"
+			}
+		}
+	}
+	"special_bonus_unique_cj_4"			// start talent names with special_bonus_
+	{
+		"BaseClass"					"special_bonus_undefined"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"						"48"
+			}
+		}
+	}
+	"special_bonus_unique_cj_5"			// start talent names with special_bonus_
+	{
+		"BaseClass"					"special_bonus_undefined"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"						"10"
+			}
+		}
+	}

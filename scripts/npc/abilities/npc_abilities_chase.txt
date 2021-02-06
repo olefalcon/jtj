@@ -1,0 +1,182 @@
+//--------------------
+//CHASE
+//-----------------------
+"chase_focus"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_chase"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"OverrideAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+	"AbilityCastPoint"				"0.4"
+	"AbilityCooldown"				"28.0 26.0 24.0 22.0"
+	"AbilityManaCost"				"100"
+	"AbilityTextureName"			"windrunner_focusfire"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"bonus_attack_range"		"50 100 150 200"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"miss_penalty"				"-100"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"duration"					"4 5 6 8"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"cast_range"				"600"
+		}
+	}
+}
+"chase_under_the_radar"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_chase"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityCastPoint"				"0"
+	"AbilityCooldown"				"30"
+	"AbilityManaCost"				"70"
+	"AbilityTextureName"			"bounty_hunter_wind_walk"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"15.0 18.0 20.0 22.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"debuff_duration"				"2"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"debuff_slow"				"-10 -15 -20 -25"
+		}
+
+	}
+}
+"chase_family_time"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_chase"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"chen_hand_of_god"	// steal the icon from this ability
+	"MaxLevel"						"4"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"health_regen_per_ally"		"2 4 6 8"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"ally_search_radius"			"1000"
+		}
+	}
+}
+"chase_oi"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero_chase"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityCastPoint"				"0"
+	"AbilityCastAnimation"			"ACT_DOTA_POOF_END"
+	"AbilityCastGestureSlot"		"DEFAULT"
+	"AbilityChannelTime"			"4.0 5.0 6.0"
+	"AbilityCooldown"				"120.0 90.0 60.0"
+	"AbilityManaCost"				"180"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	"AbilityTextureName"			"juggernaut_blade_fury"	// steal the icon from this ability
+	"MaxLevel"						"3"							// Maximum skillable level
+	"AbilitySpecial"											
+	{
+		// filling in some values with some names
+		// the values can be shown inside the Tooltip if you edit game/resource/addon_english.txt
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"attack_interval"			"0.5 0.5 0.4"
+		}
+		"02" 
+		{
+			"var_type"					"FIELD_FLOAT"
+			"attack_crit"				"200 300 400"
+		}
+		"03" 
+		{
+			"var_type"					"FIELD_INTEGER"
+			"projectile_speed"			"1000"
+		}
+		"04" 
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"850"
+		}
+		"05" 
+		{
+			"var_type"					"FIELD_INTEGER"
+			"max_duration"					"4.0 5.0 6.0"
+		}
+	}
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
+	}
+}
+"special_bonus_unique_chase_1"			// start talent names with special_bonus_
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"300"
+		}
+	}
+}
+"special_bonus_unique_chase_2"			// start talent names with special_bonus_
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"100"
+		}
+	}
+}
+"special_bonus_unique_chase_3"			// start talent names with special_bonus_
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
