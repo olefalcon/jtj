@@ -17,7 +17,11 @@ function kaydon_eat_rich:OnChannelFinish(bInterrupted)
 
 	if not bInterrupted then
 		--Handle damage based on target's current gold
-		local damage = target:GetGold() * self:GetSpecialValueFor("gold_damage")
+		local goldDamageMult = self:GetSpecialValueFor("gold_damage")
+		if caster:HasTalent("special_bonus_unique_kaydon_2") then
+			goldDamageMult = goldDamageMult + caster:FindTalentValue("special_bonus_unique_kaydon_2")
+		end
+		local damage = target:GetGold() * goldDamageMult
 		local damageType = self:GetAbilityDamageType()
 		local damageTable = {
 			victim = target,
@@ -64,6 +68,10 @@ function modifier_kaydon_citizens:DeclareFunctions()
 	return funcs
 end
 function modifier_kaydon_citizens:GetModifierMoveSpeedBonus_Percentage()
+	local caster = self:GetCaster()
+	if caster:HasTalent("special_bonus_unique_kaydon_1") then
+		return self:GetAbility():GetSpecialValueFor("move_bonus") + caster:FindTalentValue("special_bonus_unique_kaydon_1")
+	end
 	return self:GetAbility():GetSpecialValueFor("move_bonus")
 end
 function modifier_kaydon_citizens:GetModifierPhysicalArmorBonus()
@@ -120,6 +128,15 @@ end
 
 kaydon_final_step = class({})
 
+function kaydon_final_step:GetAbilityDamageType()
+	local caster = self:GetCaster()
+	if caster:HasTalent("special_bonus_unique_kaydon_4") then
+		return DAMAGE_TYPE_PURE
+	else
+		return DAMAGE_TYPE_MAGICAL
+	end
+end
+
 function kaydon_final_step:OnSpellStart()
 	local caster = self:GetCaster()
 	local target = self:GetCursorPosition()
@@ -157,6 +174,9 @@ function kaydon_final_step:OnSpellStart()
 		end
 	end
 	local bonusGold = self:GetSpecialValueFor("bonus_gold")
+	if caster:HasTalent("special_bonus_unique_kaydon_3") then
+		bonusGold = bonusGold + caster:FindTalentValue("special_bonus_unique_kaydon_3")
+	end
 	while goldStacks>0 do
 		heroes = HeroList:GetAllHeroes()
 		for _,hero in pairs(heroes) do

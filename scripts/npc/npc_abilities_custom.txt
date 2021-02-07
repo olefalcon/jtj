@@ -2068,6 +2068,54 @@
 		}
 	}
 }
+"special_bonus_unique_kaydon_1"
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"10"
+		}
+	}
+}
+"special_bonus_unique_kaydon_2"
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"50"
+		}
+	}
+}
+"special_bonus_unique_kaydon_3"
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"value"						"0.2"
+		}
+	}
+}
+"special_bonus_unique_kaydon_4"
+{
+	"BaseClass"					"special_bonus_undefined"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
 	// npc_abilities_stoltzfus.txt
 //------------------
 //STOLTZFUS
